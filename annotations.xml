@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Annotations>
+
+  <!-- ============================================================ -->
+  <!-- WILDCARD COVERAGE — all .edu and .gov sites                  -->
+  <!-- ============================================================ -->
+  <Annotation about="*.edu/*"><Label name="_include_"/></Annotation>
+  <Annotation about="*.gov/*"><Label name="_include_"/></Annotation>
+
+  <!-- ============================================================ -->
+  <!-- REFERENCE                                                     -->
+  <!-- ============================================================ -->
+  <Annotation about="wikipedia.org/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="britannica.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="merriam-webster.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="dictionary.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="thesaurus.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="factmonster.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="infoplease.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+  <Annotation about="worldbook.com/*">
+    <Label name="_include_"/><Label name="reference"/>
+  </Annotation>
+
+  <!-- ============================================================ -->
+  <!-- MATH                                                          -->
+  <!-- ============================================================ -->
+  <Annotation about="khanacademy.org/*">
+    <Label name="_include_"/><Label name="math"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="wolframalpha.com/*">
+    <Label name="_include_"/><Label name="math"/>
+  </Annotation>
+  <Annotation about="desmos.com/*">
+    <Label name="_include_"/><Label name="math"/>
+  </Annotation>
+  <Annotation about="mathway.com/*">
+    <Label name="_include_"/><Label name="math"/>
+  </Annotation>
+  <Annotation about="ck12.org/*">
+    <Label name="_include_"/><Label name="math"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="mathsisfun.com/*">
+    <Label name="_include_"/><Label name="math"/>
+  </Annotation>
+  <Annotation about="coolmath.com/*">
+    <Label name="_include_"/><Label name="math"/>
+  </Annotation>
+
+  <!-- ============================================================ -->
+  <!-- SCIENCE                                                       -->
+  <!-- ============================================================ -->
+  <Annotation about="nationalgeographic.com/*">
+    <Label name="_include_"/><Label name="science"/><Label name="history"/>
+  </Annotation>
+  <Annotation about="sciencenews.org/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="livescience.com/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="scientificamerican.com/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="pbs.org/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="pbslearningmedia.org/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="howstuffworks.com/*">
+    <Label name="_include_"/><Label name="science"/>
+  </Annotation>
+  <Annotation about="ducksters.com/*">
+    <Label name="_include_"/><Label name="science"/><Label name="history"/>
+  </Annotation>
+
+  <!-- ============================================================ -->
+  <!-- HISTORY & SOCIAL STUDIES                                      -->
+  <!-- ============================================================ -->
+  <Annotation about="history.com/*">
+    <Label name="_include_"/><Label name="history"/>
+  </Annotation>
+  <Annotation about="si.edu/*">
+    <Label name="_include_"/><Label name="history"/>
+  </Annotation>
+  <Annotation about="loc.gov/*">
+    <Label name="_include_"/><Label name="history"/>
+  </Annotation>
+  <Annotation about="historynet.com/*">
+    <Label name="_include_"/><Label name="history"/>
+  </Annotation>
+  <Annotation about="timetoast.com/*">
+    <Label name="_include_"/><Label name="history"/>
+  </Annotation>
+
+  <!-- ============================================================ -->
+  <!-- LANGUAGE ARTS & READING                                       -->
+  <!-- ============================================================ -->
+  <Annotation about="sparknotes.com/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="poetryfoundation.org/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="gutenberg.org/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="newsela.com/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="cliffsnotes.com/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="grammarly.com/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+  <Annotation about="readwritethink.org/*">
+    <Label name="_include_"/><Label name="language_arts"/>
+  </Annotation>
+
+  <!-- ============================================================ -->
+  <!-- GENERAL EDUCATIONAL                                           -->
+  <!-- ============================================================ -->
+  <Annotation about="scholastic.com/*"><Label name="_include_"/></Annotation>
+  <Annotation about="teachers.net/*"><Label name="_include_"/></Annotation>
+  <Annotation about="edutopia.org/*"><Label name="_include_"/></Annotation>
+  <Annotation about="commoncore.org/*"><Label name="_include_"/></Annotation>
+  <Annotation about="readingrockets.org/*"><Label name="_include_"/></Annotation>
+
+</Annotations>

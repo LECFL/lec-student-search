@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSearchEngine>
+  <Title>LEC Student Search</Title>
+  <Description>Safe, curated search for LEC students</Description>
+  <Context>
+    <BackgroundLabels>
+      <!-- FILTER: only sites explicitly listed in annotations.xml appear -->
+      <Label name="_include_" mode="FILTER"/>
+    </BackgroundLabels>
+  </Context>
+  <Facets>
+    <FacetItem title="All"/>
+    <FacetItem title="Reference"     label="reference"/>
+    <FacetItem title="Math"          label="math"/>
+    <FacetItem title="Science"       label="science"/>
+    <FacetItem title="History"       label="history"/>
+    <FacetItem title="Language Arts" label="language_arts"/>
+  </Facets>
+</CustomSearchEngine>

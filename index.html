@@ -4,96 +4,259 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LEC Student Search</title>
-  <!-- Replace YOUR_CX_ID with your PSE engine ID from programmablesearchengine.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Replace YOUR_CX_ID with your PSE engine ID -->
   <script async src="https://cse.google.com/cse.js?cx=YOUR_CX_ID"></script>
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f8f9fa;
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
       min-height: 100vh;
     }
 
+    /* ── Header ───────────────────────────────────────────────── */
     header {
-      background: #1a4b8c;
+      background: linear-gradient(135deg, #1a3a6e 0%, #2356a8 100%);
       color: white;
-      padding: 14px 24px;
+      padding: 12px 28px;
       display: flex;
       align-items: center;
       gap: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+
+    .logo-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
     }
 
     .header-text h1 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       letter-spacing: 0.01em;
     }
 
     .header-text p {
-      font-size: 0.75rem;
-      opacity: 0.75;
-      margin-top: 2px;
+      font-size: 0.72rem;
+      opacity: 0.7;
+      margin-top: 1px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
 
-    .search-container {
+    /* ── Main Content ─────────────────────────────────────────── */
+    main {
       max-width: 900px;
-      margin: 32px auto;
-      padding: 0 16px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
     }
 
-    /* ---- Google CSE overrides ---- */
+    /* ── Search Widget Container ──────────────────────────────── */
+    .search-wrap {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    /* ── Google CSE Overrides ─────────────────────────────────── */
+
+    /* Remove Google's outer border/background */
     .gsc-control-cse {
       background: transparent !important;
       border: none !important;
       padding: 0 !important;
+      font-family: 'Inter', sans-serif !important;
     }
 
+    /* Search input box */
     .gsc-input-box {
-      border-radius: 24px !important;
-      border: 1px solid #dfe1e5 !important;
-      box-shadow: 0 1px 6px rgba(32,33,36,0.12) !important;
+      border-radius: 10px 0 0 10px !important;
+      border: 1.5px solid #cbd5e0 !important;
+      border-right: none !important;
+      box-shadow: none !important;
+      padding: 2px 0 2px 12px !important;
+      transition: border-color 0.2s;
+    }
+
+    .gsc-input-box:focus-within {
+      border-color: #2356a8 !important;
+    }
+
+    .gsc-input {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.95rem !important;
+      color: #1a202c !important;
+    }
+
+    /* Search button */
+    .gsc-search-button {
+      margin-left: 0 !important;
     }
 
     .gsc-search-button-v2 {
-      background: #1a4b8c !important;
-      border-radius: 0 24px 24px 0 !important;
+      background: #2356a8 !important;
       border: none !important;
-      padding: 8px 18px !important;
+      border-radius: 0 10px 10px 0 !important;
+      padding: 10px 18px !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+    }
+
+    .gsc-search-button-v2:hover {
+      background: #1a3a6e !important;
+    }
+
+    .gsc-search-button-v2 svg {
+      fill: white !important;
+    }
+
+    /* Refinement tabs */
+    .gsc-refinementsArea {
+      border-bottom: 2px solid #e2e8f0 !important;
+      margin: 16px 0 12px !important;
+      padding-bottom: 0 !important;
     }
 
     .gsc-tabHeader {
+      font-family: 'Inter', sans-serif !important;
       font-size: 0.82rem !important;
-      padding: 8px 14px !important;
+      font-weight: 500 !important;
+      color: #718096 !important;
+      padding: 8px 16px !important;
+      border: none !important;
+      background: none !important;
+      border-bottom: 3px solid transparent !important;
+      margin-bottom: -2px !important;
+      cursor: pointer !important;
+      transition: color 0.15s !important;
+    }
+
+    .gsc-tabHeader:hover {
+      color: #2356a8 !important;
     }
 
     .gsc-tabHeader.gsc-tabhActive {
-      color: #1a4b8c !important;
-      border-bottom: 3px solid #1a4b8c !important;
+      color: #2356a8 !important;
+      border-bottom: 3px solid #2356a8 !important;
       font-weight: 700 !important;
     }
 
-    /* Hebrew text renders better with a larger line height */
-    .gsc-result .gsc-url-top,
-    .gsc-result .gs-title,
-    .gsc-result .gs-snippet {
+    /* Result items */
+    .gsc-result {
+      border-bottom: 1px solid #edf2f7 !important;
+      padding: 14px 0 !important;
+    }
+
+    .gs-title {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      color: #2356a8 !important;
+      text-decoration: none !important;
+    }
+
+    .gs-title:hover {
+      text-decoration: underline !important;
+    }
+
+    .gsc-url-top {
+      font-size: 0.78rem !important;
+      color: #48bb78 !important;
+      margin: 2px 0 6px !important;
+    }
+
+    .gs-snippet {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.875rem !important;
+      color: #4a5568 !important;
       line-height: 1.6 !important;
+    }
+
+    /* Remove Google branding watermark */
+    .gcsc-find-more-on-google,
+    .gcsc-find-more-on-google-root {
+      display: none !important;
+    }
+
+    /* Promoted/pinned result style */
+    .gsc-promotion {
+      background: #ebf4ff !important;
+      border: 1px solid #bee3f8 !important;
+      border-radius: 10px !important;
+      padding: 12px 16px !important;
+      margin-bottom: 12px !important;
+    }
+
+    .gsc-promotion-title {
+      color: #2356a8 !important;
+      font-weight: 600 !important;
+    }
+
+    /* Pagination */
+    .gsc-cursor-box {
+      margin-top: 20px !important;
+      text-align: center !important;
+    }
+
+    .gsc-cursor-page {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.9rem !important;
+      color: #2356a8 !important;
+      padding: 6px 12px !important;
+      border-radius: 6px !important;
+      border: 1px solid #bee3f8 !important;
+      margin: 0 3px !important;
+      cursor: pointer !important;
+    }
+
+    .gsc-cursor-current-page {
+      background: #2356a8 !important;
+      color: white !important;
+      border-color: #2356a8 !important;
+    }
+
+    /* ── Footer ───────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      font-size: 0.72rem;
+      color: #a0aec0;
+      padding: 16px;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="logo-circle">✡</div>
     <div class="header-text">
       <h1>LEC Student Search</h1>
-      <p>Lubavitch Educational Center — Safe, curated search</p>
+      <p>Lubavitch Educational Center</p>
     </div>
   </header>
 
-  <div class="search-container">
-    <div class="gcse-searchbox-only" data-autoSearchOnLoad="true"></div>
-    <div class="gcse-searchresults-only"></div>
-  </div>
+  <main>
+    <div class="search-wrap">
+      <div class="gcse-searchbox-only" data-autoSearchOnLoad="true"></div>
+      <div class="gcse-searchresults-only"></div>
+    </div>
+  </main>
+
+  <footer>Safe, curated search for LEC students &nbsp;·&nbsp; Powered by Google</footer>
 
 </body>
 </html>

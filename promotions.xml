@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LEC Student Search — Promoted Results
+  ======================================
+  Promotions pin a specific result to the top when a student searches for a keyword.
+  To add a promotion:
+    1. Copy a <Promotion> block
+    2. Set <Query> to the search keyword that triggers it
+    3. Set <Title>, <Url>, and <Description>
+  Upload this file in PSE Control Panel > Search Features > Promotions
+-->
+<Promotions>
+
+  <!-- ── Jewish Studies ─────────────────────────────────────── -->
+
+  <Promotion>
+    <Query>parsha</Query>
+    <Title>Weekly Parsha — Chabad.org</Title>
+    <Url>https://www.chabad.org/parshah/default_cdo/jewish/Parshah.htm</Url>
+    <Description>Torah portion of the week with commentary, stories, and insights.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>weekly parsha</Query>
+    <Title>Weekly Parsha — Chabad.org</Title>
+    <Url>https://www.chabad.org/parshah/default_cdo/jewish/Parshah.htm</Url>
+    <Description>Torah portion of the week with commentary, stories, and insights.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>tanya</Query>
+    <Title>Tanya — Chabad.org</Title>
+    <Url>https://www.chabad.org/library/tanya/tanya_cdo/jewish/Tanya.htm</Url>
+    <Description>The full text of the Tanya by the Alter Rebbe, with translation and commentary.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>siddur</Query>
+    <Title>Siddur — Chabad.org</Title>
+    <Url>https://www.chabad.org/library/article_cdo/aid/867657/jewish/Siddur.htm</Url>
+    <Description>Complete daily prayer text in Hebrew and English.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>prayer</Query>
+    <Title>Jewish Prayer — Chabad.org</Title>
+    <Url>https://www.chabad.org/library/article_cdo/aid/867657/jewish/Siddur.htm</Url>
+    <Description>Siddur, daily prayers, and prayer guides.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>bible</Query>
+    <Title>Tanach (Hebrew Bible) — Sefaria</Title>
+    <Url>https://www.sefaria.org/texts/Tanakh</Url>
+    <Description>Full Hebrew text with English translation — Torah, Nevi'im, Ketuvim.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>tanach</Query>
+    <Title>Tanach — Sefaria</Title>
+    <Url>https://www.sefaria.org/texts/Tanakh</Url>
+    <Description>Full Hebrew text with English translation — Torah, Nevi'im, Ketuvim.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>gemara</Query>
+    <Title>Talmud (Gemara) — Sefaria</Title>
+    <Url>https://www.sefaria.org/texts/Talmud</Url>
+    <Description>Babylonian Talmud with Hebrew/Aramaic text and English translation.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>talmud</Query>
+    <Title>Talmud — Sefaria</Title>
+    <Url>https://www.sefaria.org/texts/Talmud</Url>
+    <Description>Babylonian Talmud with Hebrew/Aramaic text and English translation.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>jewish holidays</Query>
+    <Title>Jewish Holidays — Chabad.org</Title>
+    <Url>https://www.chabad.org/holidays/default_cdo/jewish/Holidays.htm</Url>
+    <Description>Guides, laws, customs, and stories for every Jewish holiday.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>halacha</Query>
+    <Title>Daily Halacha — Halachipedia</Title>
+    <Url>https://halachipedia.com</Url>
+    <Description>Practical Jewish law encyclopedia with sources.</Description>
+  </Promotion>
+
+  <!-- ── General Studies ────────────────────────────────────── -->
+
+  <Promotion>
+    <Query>calculator</Query>
+    <Title>Desmos Graphing Calculator</Title>
+    <Url>https://www.desmos.com/calculator</Url>
+    <Description>Free online graphing calculator.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>graphing calculator</Query>
+    <Title>Desmos Graphing Calculator</Title>
+    <Url>https://www.desmos.com/calculator</Url>
+    <Description>Free online graphing calculator.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>dictionary</Query>
+    <Title>Merriam-Webster Dictionary</Title>
+    <Url>https://www.merriam-webster.com</Url>
+    <Description>The most trusted English dictionary.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>thesaurus</Query>
+    <Title>Merriam-Webster Thesaurus</Title>
+    <Url>https://www.merriam-webster.com/thesaurus</Url>
+    <Description>Find synonyms and related words.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>math help</Query>
+    <Title>Khan Academy — Math</Title>
+    <Url>https://www.khanacademy.org/math</Url>
+    <Description>Free math lessons and practice for every grade level.</Description>
+  </Promotion>
+
+  <Promotion>
+    <Query>science help</Query>
+    <Title>Khan Academy — Science</Title>
+    <Url>https://www.khanacademy.org/science</Url>
+    <Description>Biology, chemistry, physics, and earth science lessons.</Description>
+  </Promotion>
+
+</Promotions>

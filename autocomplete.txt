@@ -1,0 +1,150 @@
+# LEC Student Search — Custom Autocomplete Terms
+# ================================================
+# Upload this list in PSE Control Panel > Search Features > Autocomplete
+# One term per line. Group by subject for easy editing.
+
+# ── Torah & Tanach ────────────────────────────────────────────
+Torah
+Chumash
+Parsha
+Weekly Parsha
+Bereishis
+Shemos
+Vayikra
+Bamidbar
+Devarim
+Tanach
+Nevi'im
+Ketuvim
+Psalms
+Tehillim
+Proverbs
+Mishlei
+
+# ── Talmud ────────────────────────────────────────────────────
+Talmud
+Gemara
+Mishnah
+Daf Yomi
+Tractate Berachos
+Tractate Shabbos
+Tractate Bava Kama
+Tractate Sanhedrin
+
+# ── Chasidus ──────────────────────────────────────────────────
+Tanya
+Alter Rebbe
+Lubavitcher Rebbe
+Chassidus
+Chasidus
+Chabad philosophy
+Likkutei Torah
+Torah Or
+Hayom Yom
+Maamar
+Sicha
+Farbrengen
+
+# ── Halacha ───────────────────────────────────────────────────
+Halacha
+Shulchan Aruch
+Mishneh Torah
+Kitzur Shulchan Aruch
+Jewish law
+Shabbos laws
+Kashrus
+Tznius
+Tefillah laws
+Brachos
+
+# ── Holidays ──────────────────────────────────────────────────
+Jewish holidays
+Rosh Hashana
+Yom Kippur
+Sukkos
+Simchas Torah
+Chanukah
+Purim
+Pesach
+Passover
+Shavuos
+Tisha B'Av
+Lag B'Omer
+
+# ── Hebrew Language ───────────────────────────────────────────
+Hebrew alphabet
+Aleph beis
+Hebrew grammar
+Hebrew verbs
+Hebrew vocabulary
+Hebrew dictionary
+Nekudos
+Niqqud
+Learn Hebrew
+
+# ── Jewish History ────────────────────────────────────────────
+Jewish history
+Holocaust
+Holocaust history
+Temple in Jerusalem
+Beis Hamikdash
+Exodus from Egypt
+Jewish people history
+Chabad history
+Six Day War
+State of Israel history
+Diaspora
+
+# ── Math ──────────────────────────────────────────────────────
+Algebra
+Geometry
+Calculus
+Fractions
+Decimals
+Percentages
+Order of operations
+Pythagorean theorem
+Quadratic formula
+Graphing calculator
+Long division
+Multiplication
+Equations
+
+# ── Science ───────────────────────────────────────────────────
+Photosynthesis
+Cell biology
+Human body
+Solar system
+Planets
+Newton's laws
+States of matter
+Periodic table
+Ecosystems
+Food chain
+Volcanoes
+Weather and climate
+
+# ── English & Language Arts ────────────────────────────────────
+Parts of speech
+Grammar rules
+Essay writing
+Literary devices
+Metaphor
+Simile
+Figurative language
+Book summary
+Reading comprehension
+Spelling rules
+
+# ── History & Social Studies ─────────────────────────────────
+American Revolution
+Civil War
+World War II
+Ancient Egypt
+Ancient Rome
+Ancient Greece
+Constitution
+Bill of Rights
+US presidents
+Geography
+World capitals

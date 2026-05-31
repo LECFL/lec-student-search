@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEC Image Gallery</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:     #2c2b94;
+      --blue:     #416ca9;
+      --sky:      #a1d9e8;
+      --red:      #e0251c;
+      --charcoal: #414042;
+      --bg:       #f4f6fb;
+      --white:    #ffffff;
+      --border:   #dde3ef;
+      --muted:    #6b7280;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--navy);
+      padding: 0 28px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 2px 10px rgba(44,43,148,0.3);
+      flex-shrink: 0;
+    }
+
+    header img.logo { height: 34px; width: auto; }
+
+    .header-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.25); }
+
+    .header-nav { display: flex; gap: 4px; margin-left: 4px; }
+
+    .header-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 6px;
+      transition: all 0.12s;
+    }
+
+    .header-nav a:hover  { background: rgba(255,255,255,0.12); color: white; }
+    .header-nav a.active { background: rgba(255,255,255,0.18); color: white; }
+
+    .header-right {
+      margin-left: auto;
+    }
+
+    .btn-add {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+
+    .btn-add:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── Controls ── */
+    .controls {
+      max-width: 1100px;
+      margin: 28px auto 0;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-box {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      background: white;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-box input:focus { border-color: var(--navy); }
+
+    .search-box svg {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .filter-group { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .filter-btn {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+
+    .filter-btn:hover  { border-color: var(--navy); color: var(--navy); }
+    .filter-btn.active { background: var(--navy); border-color: var(--navy); color: white; }
+
+    .grade-select {
+      padding: 7px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: var(--charcoal);
+      background: white;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* ── Stats bar ── */
+    .stats {
+      max-width: 1100px;
+      margin: 14px auto 0;
+      padding: 0 20px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Grid ── */
+    main {
+      flex: 1;
+      max-width: 1100px;
+      width: 100%;
+      margin: 16px auto 60px;
+      padding: 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 6px rgba(44,43,148,0.06);
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(44,43,148,0.14);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: #eef1f8;
+    }
+
+    .card-img.loading {
+      background: linear-gradient(90deg, #eef1f8 25%, #e2e7f3 50%, #eef1f8 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .card-body { padding: 10px 12px 12px; }
+
+    .card-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      line-height: 1.4;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: #eef3ff;
+      color: var(--navy);
+      font-weight: 500;
+    }
+
+    /* ── Empty state ── */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    .empty h3 { font-size: 1rem; margin-bottom: 8px; color: var(--charcoal); }
+    .empty p  { font-size: 0.85rem; }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 20, 60, 0.88);
+      z-index: 1000;
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox-inner {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 820px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lightbox-img-wrap {
+      background: #0a0a20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 55vh;
+      overflow: hidden;
+    }
+
+    .lightbox-img-wrap img {
+      max-width: 100%;
+      max-height: 55vh;
+      object-fit: contain;
+    }
+
+    .lightbox-info { padding: 20px 24px; overflow-y: auto; }
+
+    .lightbox-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .lightbox-hebrew {
+      font-size: 1rem;
+      color: var(--muted);
+      direction: rtl;
+      margin-bottom: 10px;
+    }
+
+    .lightbox-desc {
+      font-size: 0.875rem;
+      color: #4b5563;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .lightbox-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+
+    .lightbox-source {
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.12s;
+    }
+
+    .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.71rem;
+      color: #9ca3af;
+      padding: 14px 16px 20px;
+    }
+
+    footer span { color: var(--sky); font-weight: 600; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 16px; height: 52px; }
+      header img.logo { height: 26px; }
+      .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="logo-white.png" alt="Lubavitch Educational Center" />
+    <div class="header-divider"></div>
+    <nav class="header-nav">
+      <a href="index.html">Search</a>
+      <a href="gallery.html" class="active">Images</a>
+    </nav>
+    <div class="header-right">
+      <!-- Replace with your Google Form URL -->
+      <a class="btn-add" href="YOUR_GOOGLE_FORM_URL" target="_blank">+ Submit Image</a>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search images…" />
+    </div>
+
+    <div class="filter-group" id="categoryFilters">
+      <button class="filter-btn active" data-category="All">All</button>
+      <button class="filter-btn" data-category="Jewish Holidays">Jewish Holidays</button>
+      <button class="filter-btn" data-category="Chasidus">Chasidus</button>
+      <button class="filter-btn" data-category="Jewish History">Jewish History</button>
+      <button class="filter-btn" data-category="Hebrew">Hebrew</button>
+      <button class="filter-btn" data-category="Science">Science</button>
+      <button class="filter-btn" data-category="Math">Math</button>
+      <button class="filter-btn" data-category="History">History</button>
+      <button class="filter-btn" data-category="Language Arts">Language Arts</button>
+    </div>
+
+    <select class="grade-select" id="gradeFilter">
+      <option value="All">All grades</option>
+      <option value="Elementary">Elementary</option>
+      <option value="Middle">Middle School</option>
+      <option value="High">High School</option>
+    </select>
+  </div>
+
+  <div class="stats" id="statsBar">Loading images…</div>
+
+  <main>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <img id="lightboxImg" src="" alt="" />
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-title" id="lightboxTitle"></div>
+        <div class="lightbox-hebrew" id="lightboxHebrew"></div>
+        <div class="lightbox-desc" id="lightboxDesc"></div>
+        <div class="lightbox-tags" id="lightboxTags"></div>
+        <div class="lightbox-source" id="lightboxSource"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    LEC Curated Image Gallery &nbsp;·&nbsp; <span>Lubavitch Educational Center</span>
+  </footer>
+
+  <script>
+    // ── Config ────────────────────────────────────────────────────
+    // Replace SHEET_ID with your Google Sheet ID (from the URL)
+    // The sheet must be published: File → Share → Publish to web → CSV
+    const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=0`;
+
+    // ── State ─────────────────────────────────────────────────────
+    let allImages = [];
+    let activeCategory = 'All';
+    let activeGrade = 'All';
+    let searchTerm = '';
+
+    // ── Fetch & parse Sheet CSV ───────────────────────────────────
+    async function loadImages() {
+      try {
+        const res = await fetch(SHEET_URL);
+        const csv = await res.text();
+        allImages = parseCSV(csv);
+        render();
+      } catch (e) {
+        document.getElementById('grid').innerHTML =
+          '<div class="empty"><h3>Could not load images</h3><p>Check that the Google Sheet is published and the Sheet ID is correct.</p></div>';
+        document.getElementById('statsBar').textContent = '';
+      }
+    }
+
+    function parseCSV(csv) {
+      const lines = csv.trim().split('\n');
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, '').toLowerCase().replace(/ /g, '_'));
+      return lines.slice(1)
+        .map(line => {
+          const values = parseCSVLine(line);
+          const obj = {};
+          headers.forEach((h, i) => obj[h] = (values[i] || '').trim().replace(/^"|"$/g, ''));
+          return obj;
+        })
+        .filter(img => img.approved === 'yes' && img.image_url);
+    }
+
+    function parseCSVLine(line) {
+      const result = [];
+      let current = '';
+      let inQuotes = false;
+      for (let i = 0; i < line.length; i++) {
+        if (line[i] === '"') { inQuotes = !inQuotes; }
+        else if (line[i] === ',' && !inQuotes) { result.push(current); current = ''; }
+        else { current += line[i]; }
+      }
+      result.push(current);
+      return result;
+    }
+
+    // ── Filter & Render ───────────────────────────────────────────
+    function getFiltered() {
+      const q = searchTerm.toLowerCase();
+      return allImages.filter(img => {
+        const matchCat   = activeCategory === 'All' || img.category === activeCategory;
+        const matchGrade = activeGrade === 'All' || img.grade_level === activeGrade || img.grade_level === 'All';
+        const matchQ     = !q ||
+          (img.title || '').toLowerCase().includes(q) ||
+          (img.hebrew_title || '').includes(q) ||
+          (img.description || '').toLowerCase().includes(q) ||
+          (img.tags || '').toLowerCase().includes(q);
+        return matchCat && matchGrade && matchQ;
+      });
+    }
+
+    function render() {
+      const filtered = getFiltered();
+      const grid = document.getElementById('grid');
+      const stats = document.getElementById('statsBar');
+
+      stats.textContent = filtered.length === allImages.length
+        ? `${allImages.length} images`
+        : `${filtered.length} of ${allImages.length} images`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="empty"><h3>No images found</h3><p>Try a different search or category.</p></div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map((img, i) => `
+        <div class="card" data-index="${i}" onclick="openLightbox(${allImages.indexOf(img)})">
+          <img class="card-img loading" src="${img.image_url}"
+               alt="${img.title}" loading="lazy"
+               onload="this.classList.remove('loading')"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'150\'><rect fill=\'%23eef1f8\' width=\'200\' height=\'150\'/><text x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' fill=\'%236b7280\' font-size=\'12\'>Image unavailable</text></svg>'" />
+          <div class="card-body">
+            <div class="card-title">${img.title || 'Untitled'}</div>
+            <div class="card-meta">
+              ${img.category ? `<span class="tag">${img.category}</span>` : ''}
+              ${img.grade_level && img.grade_level !== 'All' ? `<span class="tag">${img.grade_level}</span>` : ''}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ── Lightbox ──────────────────────────────────────────────────
+    function openLightbox(index) {
+      const img = allImages[index];
+      document.getElementById('lightboxImg').src = img.image_url;
+      document.getElementById('lightboxImg').alt = img.title;
+      document.getElementById('lightboxTitle').textContent = img.title || '';
+      document.getElementById('lightboxHebrew').textContent = img.hebrew_title || '';
+      document.getElementById('lightboxDesc').textContent = img.description || '';
+      document.getElementById('lightboxSource').textContent =
+        [img.source ? `Source: ${img.source}` : '', img.license ? `License: ${img.license}` : '']
+        .filter(Boolean).join('  ·  ');
+
+      const tagsEl = document.getElementById('lightboxTags');
+      tagsEl.innerHTML = (img.tags || '').split(',')
+        .map(t => t.trim()).filter(Boolean)
+        .map(t => `<span class="tag">${t}</span>`).join('');
+
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── Event Listeners ───────────────────────────────────────────
+    document.getElementById('searchInput').addEventListener('input', e => {
+      searchTerm = e.target.value;
+      render();
+    });
+
+    document.getElementById('categoryFilters').addEventListener('click', e => {
+      if (!e.target.matches('.filter-btn')) return;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      activeCategory = e.target.dataset.category;
+      render();
+    });
+
+    document.getElementById('gradeFilter').addEventListener('change', e => {
+      activeGrade = e.target.value;
+      render();
+    });
+
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // ── Init ──────────────────────────────────────────────────────
+    loadImages();
+  </script>
+
+</body>
+</html>

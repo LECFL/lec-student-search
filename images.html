@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEC Image Search</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!--
+    This page uses a SEPARATE PSE engine configured for image search only.
+    Create a new PSE at programmablesearchengine.google.com with:
+      - Only commons.wikimedia.org/* in the site list
+      - Image search ENABLED in settings
+    Replace YOUR_IMAGE_CX_ID below with that engine's ID.
+  -->
+  <script async src="https://cse.google.com/cse.js?cx=YOUR_IMAGE_CX_ID"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:     #2c2b94;
+      --blue:     #416ca9;
+      --sky:      #a1d9e8;
+      --charcoal: #414042;
+      --bg:       #f4f6fb;
+      --white:    #ffffff;
+      --border:   #dde3ef;
+      --muted:    #6b7280;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--navy);
+      padding: 0 28px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 2px 10px rgba(44,43,148,0.3);
+    }
+
+    header img.logo { height: 34px; width: auto; object-fit: contain; }
+
+    .header-divider {
+      width: 1px; height: 28px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      margin-left: 4px;
+    }
+
+    .header-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 6px;
+      transition: all 0.12s;
+    }
+
+    .header-nav a:hover    { background: rgba(255,255,255,0.12); color: white; }
+    .header-nav a.active   { background: rgba(255,255,255,0.18); color: white; }
+
+    main {
+      flex: 1;
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .notice {
+      background: #eef3ff;
+      border: 1px solid #c7d3f5;
+      border-left: 4px solid var(--navy);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .notice strong { color: var(--navy); }
+
+    .search-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 16px rgba(44,43,148,0.08);
+      border: 1px solid var(--border);
+    }
+
+    /* ── Google CSE Overrides ── */
+    .gsc-control-cse {
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    .gsc-input-box {
+      border-radius: 10px 0 0 10px !important;
+      border: 1.5px solid var(--border) !important;
+      border-right: none !important;
+      box-shadow: none !important;
+    }
+
+    .gsc-input-box:focus-within { border-color: var(--navy) !important; }
+
+    .gsc-input {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.95rem !important;
+    }
+
+    .gsc-search-button { margin-left: 0 !important; }
+
+    .gsc-search-button-v2 {
+      background: var(--navy) !important;
+      border: none !important;
+      border-radius: 0 10px 10px 0 !important;
+      padding: 10px 18px !important;
+    }
+
+    .gsc-search-button-v2:hover { background: var(--blue) !important; }
+    .gsc-search-button-v2 svg   { fill: white !important; }
+
+    /* Image results grid */
+    .gsc-results-wrapper-overlay,
+    .gsc-results-wrapper-nooverlay { padding: 0 !important; }
+
+    .gcsc-find-more-on-google,
+    .gcsc-find-more-on-google-root { display: none !important; }
+
+    footer {
+      text-align: center;
+      font-size: 0.71rem;
+      color: #9ca3af;
+      padding: 14px 16px 20px;
+    }
+
+    footer span { color: var(--sky); font-weight: 600; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 16px; height: 52px; }
+      header img.logo { height: 26px; }
+      .search-card { padding: 18px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="logo" src="logo-white.png" alt="Lubavitch Educational Center" />
+    <div class="header-divider"></div>
+    <nav class="header-nav">
+      <a href="index.html">Search</a>
+      <a href="images.html" class="active">Images</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="notice">
+      <strong>Image search</strong> is limited to Wikimedia Commons — freely licensed, educational images only.
+    </div>
+    <div class="search-card">
+      <div class="gcse-search" data-autoSearchOnLoad="true"></div>
+    </div>
+  </main>
+
+  <footer>
+    Images from <span>Wikimedia Commons</span> &nbsp;·&nbsp; Lubavitch Educational Center &nbsp;·&nbsp; Powered by Google
+  </footer>
+
+</body>
+</html>

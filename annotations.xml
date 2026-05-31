@@ -1,66 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?><Annotations>
   <!-- JEWISH TEXTS -->
-  <Annotation about="*.sefaria.org/*" timestamp="0x0006532000000001" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="sefaria.org"/></Annotation>
-  <Annotation about="*.hebrewbooks.org/*" timestamp="0x0006532000000002" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="hebrewbooks.org"/></Annotation>
-  <Annotation about="*.mechon-mamre.org/*" timestamp="0x0006532000000003" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="mechon-mamre.org"/></Annotation>
-  <Annotation about="*.jewishvirtuallibrary.org/*" timestamp="0x0006532000000004" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="history"/><AdditionalData attribute="original_url" value="jewishvirtuallibrary.org"/></Annotation>
-  <Annotation about="*.myjewishlearning.com/*" timestamp="0x0006532000000005" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="myjewishlearning.com"/></Annotation>
-  <Annotation about="*.ou.org/*" timestamp="0x0006532000000006" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="ou.org"/></Annotation>
-  <Annotation about="*.torah.org/*" timestamp="0x0006532000000007" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="torah.org"/></Annotation>
-  <Annotation about="*.aish.com/*" timestamp="0x0006532000000008" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="aish.com"/></Annotation>
-  <Annotation about="*.torahanytime.com/*" timestamp="0x0006532000000009" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="torahanytime.com"/></Annotation>
-  <Annotation about="*.yutorah.org/*" timestamp="0x000653200000000a" score="1.0"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="yutorah.org"/></Annotation>
-
+  <Annotation about="*.sefaria.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="sefaria.org"/></Annotation>
+  <Annotation about="*.hebrewbooks.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="hebrewbooks.org"/></Annotation>
+  <Annotation about="*.mechon-mamre.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="mechon-mamre.org"/></Annotation>
+  <Annotation about="*.jewishvirtuallibrary.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="history"/><AdditionalData attribute="original_url" value="jewishvirtuallibrary.org"/></Annotation>
+  <Annotation about="*.myjewishlearning.com/*"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="myjewishlearning.com"/></Annotation>
+  <Annotation about="*.ou.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="ou.org"/></Annotation>
+  <Annotation about="*.torah.org/*"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="torah.org"/></Annotation>
+  <Annotation about="*.aish.com/*"><Label name="_include_"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="aish.com"/></Annotation>
+  <Annotation about="*.torahanytime.com/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="torahanytime.com"/></Annotation>
+  <Annotation about="*.yutorah.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="yutorah.org"/></Annotation>
   <!-- CHASIDUS -->
-  <Annotation about="*.chabad.org/*" timestamp="0x0006531f69069ad8" score="1.0"><Label name="_include_"/><Label name="chasidus"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="chabad.org"/></Annotation>
-  <Annotation about="*.kehot.com/*" timestamp="0x000653200000000b" score="1.0"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="kehot.com"/></Annotation>
-  <Annotation about="*.meaningfullife.com/*" timestamp="0x000653200000000c" score="1.0"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="meaningfullife.com"/></Annotation>
-  <Annotation about="*.sichos-in-english.org/*" timestamp="0x000653200000000d" score="1.0"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="sichos-in-english.org"/></Annotation>
-  <Annotation about="*.tanyanet.com/*" timestamp="0x000653200000000e" score="1.0"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="tanyanet.com"/></Annotation>
-
+  <Annotation about="*.chabad.org/*"><Label name="_include_"/><Label name="chasidus"/><Label name="jewish_texts"/><Label name="halacha"/><AdditionalData attribute="original_url" value="chabad.org"/></Annotation>
+  <Annotation about="*.kehot.com/*"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="kehot.com"/></Annotation>
+  <Annotation about="*.meaningfullife.com/*"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="meaningfullife.com"/></Annotation>
+  <Annotation about="*.sichos-in-english.org/*"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="sichos-in-english.org"/></Annotation>
+  <Annotation about="*.tanyanet.com/*"><Label name="_include_"/><Label name="chasidus"/><AdditionalData attribute="original_url" value="tanyanet.com"/></Annotation>
   <!-- HALACHA -->
-  <Annotation about="*.halachipedia.com/*" timestamp="0x000653200000000f" score="1.0"><Label name="_include_"/><Label name="halacha"/><AdditionalData attribute="original_url" value="halachipedia.com"/></Annotation>
-  <Annotation about="*.dafyomi.co.il/*" timestamp="0x0006532000000010" score="1.0"><Label name="_include_"/><Label name="halacha"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="dafyomi.co.il"/></Annotation>
-
+  <Annotation about="*.halachipedia.com/*"><Label name="_include_"/><Label name="halacha"/><AdditionalData attribute="original_url" value="halachipedia.com"/></Annotation>
+  <Annotation about="*.dafyomi.co.il/*"><Label name="_include_"/><Label name="halacha"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="dafyomi.co.il"/></Annotation>
   <!-- HEBREW LANGUAGE -->
-  <Annotation about="*.morfix.co.il/*" timestamp="0x0006532000000011" score="1.0"><Label name="_include_"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="morfix.co.il"/></Annotation>
-  <Annotation about="*.pealim.com/*" timestamp="0x0006532000000012" score="1.0"><Label name="_include_"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="pealim.com"/></Annotation>
-
+  <Annotation about="*.morfix.co.il/*"><Label name="_include_"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="morfix.co.il"/></Annotation>
+  <Annotation about="*.pealim.com/*"><Label name="_include_"/><Label name="hebrew"/><AdditionalData attribute="original_url" value="pealim.com"/></Annotation>
   <!-- JEWISH HISTORY -->
-  <Annotation about="*.yadvashem.org/*" timestamp="0x0006532000000013" score="1.0"><Label name="_include_"/><Label name="history"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="yadvashem.org"/></Annotation>
-  <Annotation about="*.ushmm.org/*" timestamp="0x0006532000000014" score="1.0"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="ushmm.org"/></Annotation>
-
+  <Annotation about="*.yadvashem.org/*"><Label name="_include_"/><Label name="history"/><Label name="jewish_texts"/><AdditionalData attribute="original_url" value="yadvashem.org"/></Annotation>
+  <Annotation about="*.ushmm.org/*"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="ushmm.org"/></Annotation>
   <!-- MATH -->
-  <Annotation about="*.khanacademy.org/*" timestamp="0x0006532000000015" score="1.0"><Label name="_include_"/><Label name="math"/><Label name="science"/><AdditionalData attribute="original_url" value="khanacademy.org"/></Annotation>
-  <Annotation about="*.wolframalpha.com/*" timestamp="0x0006532000000016" score="1.0"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="wolframalpha.com"/></Annotation>
-  <Annotation about="*.desmos.com/*" timestamp="0x0006532000000017" score="1.0"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="desmos.com"/></Annotation>
-  <Annotation about="*.mathway.com/*" timestamp="0x0006532000000018" score="1.0"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="mathway.com"/></Annotation>
-  <Annotation about="*.ck12.org/*" timestamp="0x0006532000000019" score="1.0"><Label name="_include_"/><Label name="math"/><Label name="science"/><AdditionalData attribute="original_url" value="ck12.org"/></Annotation>
-  <Annotation about="*.mathsisfun.com/*" timestamp="0x000653200000001a" score="1.0"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="mathsisfun.com"/></Annotation>
-
+  <Annotation about="*.khanacademy.org/*"><Label name="_include_"/><Label name="math"/><Label name="science"/><AdditionalData attribute="original_url" value="khanacademy.org"/></Annotation>
+  <Annotation about="*.wolframalpha.com/*"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="wolframalpha.com"/></Annotation>
+  <Annotation about="*.desmos.com/*"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="desmos.com"/></Annotation>
+  <Annotation about="*.mathway.com/*"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="mathway.com"/></Annotation>
+  <Annotation about="*.ck12.org/*"><Label name="_include_"/><Label name="math"/><Label name="science"/><AdditionalData attribute="original_url" value="ck12.org"/></Annotation>
+  <Annotation about="*.mathsisfun.com/*"><Label name="_include_"/><Label name="math"/><AdditionalData attribute="original_url" value="mathsisfun.com"/></Annotation>
   <!-- SCIENCE -->
-  <Annotation about="*.nationalgeographic.com/*" timestamp="0x000653200000001b" score="1.0"><Label name="_include_"/><Label name="science"/><Label name="history"/><AdditionalData attribute="original_url" value="nationalgeographic.com"/></Annotation>
-  <Annotation about="*.livescience.com/*" timestamp="0x000653200000001c" score="1.0"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="livescience.com"/></Annotation>
-  <Annotation about="*.howstuffworks.com/*" timestamp="0x000653200000001d" score="1.0"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="howstuffworks.com"/></Annotation>
-  <Annotation about="*.pbs.org/*" timestamp="0x000653200000001e" score="1.0"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="pbs.org"/></Annotation>
-  <Annotation about="*.pbslearningmedia.org/*" timestamp="0x000653200000001f" score="1.0"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="pbslearningmedia.org"/></Annotation>
-
+  <Annotation about="*.nationalgeographic.com/*"><Label name="_include_"/><Label name="science"/><Label name="history"/><AdditionalData attribute="original_url" value="nationalgeographic.com"/></Annotation>
+  <Annotation about="*.livescience.com/*"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="livescience.com"/></Annotation>
+  <Annotation about="*.howstuffworks.com/*"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="howstuffworks.com"/></Annotation>
+  <Annotation about="*.pbs.org/*"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="pbs.org"/></Annotation>
+  <Annotation about="*.pbslearningmedia.org/*"><Label name="_include_"/><Label name="science"/><AdditionalData attribute="original_url" value="pbslearningmedia.org"/></Annotation>
   <!-- HISTORY -->
-  <Annotation about="*.history.com/*" timestamp="0x0006532000000020" score="1.0"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="history.com"/></Annotation>
-  <Annotation about="*.si.edu/*" timestamp="0x0006532000000021" score="1.0"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="si.edu"/></Annotation>
-  <Annotation about="*.loc.gov/*" timestamp="0x0006532000000022" score="1.0"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="loc.gov"/></Annotation>
-
+  <Annotation about="*.history.com/*"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="history.com"/></Annotation>
+  <Annotation about="*.si.edu/*"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="si.edu"/></Annotation>
+  <Annotation about="*.loc.gov/*"><Label name="_include_"/><Label name="history"/><AdditionalData attribute="original_url" value="loc.gov"/></Annotation>
   <!-- REFERENCE -->
-  <Annotation about="*.wikipedia.org/*" timestamp="0x0006532000000023" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="wikipedia.org"/></Annotation>
-  <Annotation about="*.britannica.com/*" timestamp="0x0006532000000024" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="britannica.com"/></Annotation>
-  <Annotation about="*.merriam-webster.com/*" timestamp="0x0006532000000025" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="merriam-webster.com"/></Annotation>
-  <Annotation about="www.scholastic.com/*" timestamp="0x0006531f6c17ce59" score="1.0"><Label name="_include_"/><AdditionalData attribute="original_url" value="scholastic.com"/></Annotation>
-  <Annotation about="*.sparknotes.com/*" timestamp="0x0006532000000026" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="sparknotes.com"/></Annotation>
-  <Annotation about="*.gutenberg.org/*" timestamp="0x0006532000000027" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="gutenberg.org"/></Annotation>
-  <Annotation about="*.newsela.com/*" timestamp="0x0006532000000028" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="newsela.com"/></Annotation>
-  <Annotation about="*.ducksters.com/*" timestamp="0x0006532000000029" score="1.0"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="ducksters.com"/></Annotation>
-
+  <Annotation about="*.wikipedia.org/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="wikipedia.org"/></Annotation>
+  <Annotation about="*.britannica.com/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="britannica.com"/></Annotation>
+  <Annotation about="*.merriam-webster.com/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="merriam-webster.com"/></Annotation>
+  <Annotation about="www.scholastic.com/*"><Label name="_include_"/><AdditionalData attribute="original_url" value="scholastic.com"/></Annotation>
+  <Annotation about="*.sparknotes.com/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="sparknotes.com"/></Annotation>
+  <Annotation about="*.gutenberg.org/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="gutenberg.org"/></Annotation>
+  <Annotation about="*.newsela.com/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="newsela.com"/></Annotation>
+  <Annotation about="*.ducksters.com/*"><Label name="_include_"/><Label name="reference"/><AdditionalData attribute="original_url" value="ducksters.com"/></Annotation>
   <!-- BROAD ACADEMIC COVERAGE -->
-  <Annotation about="*.edu/*" timestamp="0x000653200000002a" score="1.0"><Label name="_include_"/><AdditionalData attribute="original_url" value="*.edu"/></Annotation>
-  <Annotation about="*.gov/*" timestamp="0x000653200000002b" score="1.0"><Label name="_include_"/><AdditionalData attribute="original_url" value="*.gov"/></Annotation>
+  <Annotation about="*.edu/*"><Label name="_include_"/><AdditionalData attribute="original_url" value="*.edu"/></Annotation>
+  <Annotation about="*.gov/*"><Label name="_include_"/><AdditionalData attribute="original_url" value="*.gov"/></Annotation>
 </Annotations>

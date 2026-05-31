@@ -2,178 +2,80 @@
 <!--
   LEC Student Search — Site List
   ================================
-  To add a site: copy any <Annotation> block and change the "about" URL.
-  Labels determine which tab a site appears under:
-    jewish_texts   → Jewish Texts tab
-    chasidus       → Chasidus tab
-    halacha        → Halacha tab
-    hebrew         → Hebrew tab
-    math           → Math tab
-    science        → Science tab
-    history        → History tab
-    reference      → Reference tab
-  A site can have multiple labels (appears in multiple tabs).
-  _include_ must always be present — it's what allows the site in at all.
+  To add a site, copy any <Annotation> block and update the URL.
+  Every entry needs _include_ plus any subject labels.
+  Labels: jewish_texts | chasidus | halacha | hebrew | math | science | history | reference
 -->
 <Annotations>
 
-  <!-- ============================================================ -->
-  <!-- JEWISH TEXTS — Primary Hebrew/Torah resources                 -->
-  <!-- ============================================================ -->
-  <Annotation about="sefaria.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/>
-  </Annotation>
-  <Annotation about="hebrewbooks.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/>
-  </Annotation>
-  <Annotation about="mechon-mamre.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/>
-  </Annotation>
-  <Annotation about="jewishvirtuallibrary.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="history"/>
-  </Annotation>
-  <Annotation about="myjewishlearning.com/*">
-    <Label name="_include_"/><Label name="jewish_texts"/>
-  </Annotation>
-  <Annotation about="ou.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/>
-  </Annotation>
-  <Annotation about="torah.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/>
-  </Annotation>
-  <Annotation about="aish.com/*">
-    <Label name="_include_"/><Label name="jewish_texts"/>
-  </Annotation>
-  <Annotation about="torahanytime.com/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="chasidus"/>
-  </Annotation>
-  <Annotation about="yutorah.org/*">
-    <Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/>
-  </Annotation>
+  <!-- JEWISH TEXTS -->
+  <Annotation about="https://www.sefaria.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/></Annotation>
+  <Annotation about="https://hebrewbooks.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/></Annotation>
+  <Annotation about="https://www.mechon-mamre.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="hebrew"/></Annotation>
+  <Annotation about="https://www.jewishvirtuallibrary.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="history"/></Annotation>
+  <Annotation about="https://www.myjewishlearning.com/*"><Label name="_include_"/><Label name="jewish_texts"/></Annotation>
+  <Annotation about="https://www.ou.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/></Annotation>
+  <Annotation about="https://torah.org/*"><Label name="_include_"/><Label name="jewish_texts"/></Annotation>
+  <Annotation about="https://www.aish.com/*"><Label name="_include_"/><Label name="jewish_texts"/></Annotation>
+  <Annotation about="https://www.torahanytime.com/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="chasidus"/></Annotation>
+  <Annotation about="https://www.yutorah.org/*"><Label name="_include_"/><Label name="jewish_texts"/><Label name="halacha"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- CHASIDUS — Chabad / Lubavitch content                        -->
-  <!-- ============================================================ -->
-  <Annotation about="chabad.org/*">
-    <Label name="_include_"/><Label name="chasidus"/><Label name="jewish_texts"/><Label name="halacha"/>
-  </Annotation>
-  <Annotation about="kehot.com/*">
-    <Label name="_include_"/><Label name="chasidus"/>
-  </Annotation>
-  <Annotation about="meaningfullife.com/*">
-    <Label name="_include_"/><Label name="chasidus"/>
-  </Annotation>
-  <Annotation about="sichos-in-english.org/*">
-    <Label name="_include_"/><Label name="chasidus"/>
-  </Annotation>
-  <Annotation about="tanyanet.com/*">
-    <Label name="_include_"/><Label name="chasidus"/>
-  </Annotation>
+  <!-- CHASIDUS -->
+  <Annotation about="https://www.chabad.org/*"><Label name="_include_"/><Label name="chasidus"/><Label name="jewish_texts"/><Label name="halacha"/></Annotation>
+  <Annotation about="https://www.kehot.com/*"><Label name="_include_"/><Label name="chasidus"/></Annotation>
+  <Annotation about="https://www.meaningfullife.com/*"><Label name="_include_"/><Label name="chasidus"/></Annotation>
+  <Annotation about="https://www.sichos-in-english.org/*"><Label name="_include_"/><Label name="chasidus"/></Annotation>
+  <Annotation about="https://tanyanet.com/*"><Label name="_include_"/><Label name="chasidus"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- HALACHA                                                       -->
-  <!-- ============================================================ -->
-  <Annotation about="halachipedia.com/*">
-    <Label name="_include_"/><Label name="halacha"/>
-  </Annotation>
-  <Annotation about="dafyomi.co.il/*">
-    <Label name="_include_"/><Label name="halacha"/><Label name="jewish_texts"/>
-  </Annotation>
-  <Annotation about="shulchanaruch.com/*">
-    <Label name="_include_"/><Label name="halacha"/>
-  </Annotation>
+  <!-- HALACHA -->
+  <Annotation about="https://halachipedia.com/*"><Label name="_include_"/><Label name="halacha"/></Annotation>
+  <Annotation about="https://www.dafyomi.co.il/*"><Label name="_include_"/><Label name="halacha"/><Label name="jewish_texts"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- HEBREW LANGUAGE                                               -->
-  <!-- ============================================================ -->
-  <Annotation about="morfix.co.il/*">
-    <Label name="_include_"/><Label name="hebrew"/>
-  </Annotation>
-  <Annotation about="pealim.com/*">
-    <Label name="_include_"/><Label name="hebrew"/>
-  </Annotation>
-  <Annotation about="milon.co.il/*">
-    <Label name="_include_"/><Label name="hebrew"/>
-  </Annotation>
+  <!-- HEBREW LANGUAGE -->
+  <Annotation about="https://www.morfix.co.il/*"><Label name="_include_"/><Label name="hebrew"/></Annotation>
+  <Annotation about="https://www.pealim.com/*"><Label name="_include_"/><Label name="hebrew"/></Annotation>
+  <Annotation about="https://milon.co.il/*"><Label name="_include_"/><Label name="hebrew"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- JEWISH HISTORY                                                -->
-  <!-- ============================================================ -->
-  <Annotation about="yadvashem.org/*">
-    <Label name="_include_"/><Label name="history"/><Label name="jewish_texts"/>
-  </Annotation>
-  <Annotation about="ushmm.org/*">
-    <Label name="_include_"/><Label name="history"/>
-  </Annotation>
-  <Annotation about="jhi.pl/*">
-    <Label name="_include_"/><Label name="history"/>
-  </Annotation>
+  <!-- JEWISH HISTORY -->
+  <Annotation about="https://www.yadvashem.org/*"><Label name="_include_"/><Label name="history"/><Label name="jewish_texts"/></Annotation>
+  <Annotation about="https://www.ushmm.org/*"><Label name="_include_"/><Label name="history"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- GENERAL STUDIES — Math                                        -->
-  <!-- ============================================================ -->
-  <Annotation about="khanacademy.org/*">
-    <Label name="_include_"/><Label name="math"/><Label name="science"/>
-  </Annotation>
-  <Annotation about="wolframalpha.com/*">
-    <Label name="_include_"/><Label name="math"/>
-  </Annotation>
-  <Annotation about="desmos.com/*">
-    <Label name="_include_"/><Label name="math"/>
-  </Annotation>
-  <Annotation about="mathway.com/*">
-    <Label name="_include_"/><Label name="math"/>
-  </Annotation>
-  <Annotation about="ck12.org/*">
-    <Label name="_include_"/><Label name="math"/><Label name="science"/>
-  </Annotation>
-  <Annotation about="mathsisfun.com/*">
-    <Label name="_include_"/><Label name="math"/>
-  </Annotation>
+  <!-- MATH -->
+  <Annotation about="https://www.khanacademy.org/*"><Label name="_include_"/><Label name="math"/><Label name="science"/></Annotation>
+  <Annotation about="https://www.wolframalpha.com/*"><Label name="_include_"/><Label name="math"/></Annotation>
+  <Annotation about="https://www.desmos.com/*"><Label name="_include_"/><Label name="math"/></Annotation>
+  <Annotation about="https://www.mathway.com/*"><Label name="_include_"/><Label name="math"/></Annotation>
+  <Annotation about="https://www.ck12.org/*"><Label name="_include_"/><Label name="math"/><Label name="science"/></Annotation>
+  <Annotation about="https://www.mathsisfun.com/*"><Label name="_include_"/><Label name="math"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- GENERAL STUDIES — Science                                     -->
-  <!-- ============================================================ -->
-  <Annotation about="nationalgeographic.com/*">
-    <Label name="_include_"/><Label name="science"/><Label name="history"/>
-  </Annotation>
-  <Annotation about="livescience.com/*">
-    <Label name="_include_"/><Label name="science"/>
-  </Annotation>
-  <Annotation about="howstuffworks.com/*">
-    <Label name="_include_"/><Label name="science"/>
-  </Annotation>
-  <Annotation about="pbs.org/*">
-    <Label name="_include_"/><Label name="science"/>
-  </Annotation>
-  <Annotation about="pbslearningmedia.org/*">
-    <Label name="_include_"/><Label name="science"/>
-  </Annotation>
+  <!-- SCIENCE -->
+  <Annotation about="https://www.nationalgeographic.com/*"><Label name="_include_"/><Label name="science"/><Label name="history"/></Annotation>
+  <Annotation about="https://www.livescience.com/*"><Label name="_include_"/><Label name="science"/></Annotation>
+  <Annotation about="https://www.howstuffworks.com/*"><Label name="_include_"/><Label name="science"/></Annotation>
+  <Annotation about="https://www.pbs.org/*"><Label name="_include_"/><Label name="science"/></Annotation>
+  <Annotation about="https://www.pbslearningmedia.org/*"><Label name="_include_"/><Label name="science"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- REFERENCE                                                     -->
-  <!-- ============================================================ -->
-  <Annotation about="wikipedia.org/*">
-    <Label name="_include_"/><Label name="reference"/>
-  </Annotation>
+  <!-- HISTORY -->
+  <Annotation about="https://www.history.com/*"><Label name="_include_"/><Label name="history"/></Annotation>
+  <Annotation about="https://www.si.edu/*"><Label name="_include_"/><Label name="history"/></Annotation>
+  <Annotation about="https://www.loc.gov/*"><Label name="_include_"/><Label name="history"/></Annotation>
+  <Annotation about="https://www.historynet.com/*"><Label name="_include_"/><Label name="history"/></Annotation>
 
-  <Annotation about="britannica.com/*">
-    <Label name="_include_"/><Label name="reference"/>
-  </Annotation>
-  <Annotation about="merriam-webster.com/*">
-    <Label name="_include_"/><Label name="reference"/>
-  </Annotation>
-  <Annotation about="sparknotes.com/*">
-    <Label name="_include_"/><Label name="reference"/>
-  </Annotation>
-  <Annotation about="ducksters.com/*">
-    <Label name="_include_"/><Label name="reference"/>
-  </Annotation>
+  <!-- LANGUAGE ARTS -->
+  <Annotation about="https://www.sparknotes.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.poetryfoundation.org/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.gutenberg.org/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://newsela.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.cliffsnotes.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
 
-  <!-- ============================================================ -->
-  <!-- BROAD ACADEMIC COVERAGE                                       -->
-  <!-- ============================================================ -->
-  <!-- All accredited .edu and .gov domains -->
+  <!-- REFERENCE -->
+  <Annotation about="https://www.wikipedia.org/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.britannica.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.merriam-webster.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.ducksters.com/*"><Label name="_include_"/><Label name="reference"/></Annotation>
+  <Annotation about="https://www.scholastic.com/*"><Label name="_include_"/></Annotation>
+
+  <!-- BROAD ACADEMIC COVERAGE -->
   <Annotation about="*.edu/*"><Label name="_include_"/></Annotation>
   <Annotation about="*.gov/*"><Label name="_include_"/></Annotation>
 

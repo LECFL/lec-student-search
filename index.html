@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LEC Student Search</title>
-  <!-- Replace YOUR_CX_ID below with your PSE engine ID (cx=...) from programmablesearchengine.google.com -->
+  <!-- Replace YOUR_CX_ID with your PSE engine ID from programmablesearchengine.google.com -->
   <script async src="https://cse.google.com/cse.js?cx=YOUR_CX_ID"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,84 +16,77 @@
     }
 
     header {
-      background: #1a73e8;
+      background: #1a4b8c;
       color: white;
-      padding: 16px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
-    header h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+    .header-text h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
 
-    header .school-name {
-      font-size: 0.8rem;
-      opacity: 0.8;
+    .header-text p {
+      font-size: 0.75rem;
+      opacity: 0.75;
       margin-top: 2px;
     }
 
     .search-container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 32px auto;
       padding: 0 16px;
     }
 
-    /* Override Google's default widget styles for a cleaner look */
+    /* ---- Google CSE overrides ---- */
     .gsc-control-cse {
       background: transparent !important;
       border: none !important;
       padding: 0 !important;
     }
 
-    .gsc-search-box {
-      margin-bottom: 16px;
-    }
-
     .gsc-input-box {
       border-radius: 24px !important;
       border: 1px solid #dfe1e5 !important;
-      box-shadow: 0 1px 6px rgba(32,33,36,0.1) !important;
-      padding: 8px 16px !important;
+      box-shadow: 0 1px 6px rgba(32,33,36,0.12) !important;
     }
 
-    .gsc-search-button {
-      background: #1a73e8 !important;
-      border-radius: 24px !important;
+    .gsc-search-button-v2 {
+      background: #1a4b8c !important;
+      border-radius: 0 24px 24px 0 !important;
       border: none !important;
-      padding: 8px 20px !important;
-    }
-
-    .gsc-refinementsArea {
-      border-bottom: 2px solid #e8eaed;
-      margin-bottom: 16px;
+      padding: 8px 18px !important;
     }
 
     .gsc-tabHeader {
-      font-size: 0.85rem !important;
-      color: #5f6368 !important;
-      padding: 8px 16px !important;
-      border: none !important;
-      background: none !important;
-      cursor: pointer;
+      font-size: 0.82rem !important;
+      padding: 8px 14px !important;
     }
 
     .gsc-tabHeader.gsc-tabhActive {
-      color: #1a73e8 !important;
-      border-bottom: 3px solid #1a73e8 !important;
-      font-weight: 600 !important;
+      color: #1a4b8c !important;
+      border-bottom: 3px solid #1a4b8c !important;
+      font-weight: 700 !important;
+    }
+
+    /* Hebrew text renders better with a larger line height */
+    .gsc-result .gsc-url-top,
+    .gsc-result .gs-title,
+    .gsc-result .gs-snippet {
+      line-height: 1.6 !important;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div>
+    <div class="header-text">
       <h1>LEC Student Search</h1>
-      <div class="school-name">Lubavitch Educational Center</div>
+      <p>Lubavitch Educational Center — Safe, curated search</p>
     </div>
   </header>
 

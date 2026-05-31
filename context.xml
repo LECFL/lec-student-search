@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomSearchEngine>
   <Title>LEC Student Search</Title>
-  <Description>Safe, curated search for LEC students</Description>
+  <Description>Safe, curated search for LEC students — Jewish learning and general studies</Description>
   <Context>
     <BackgroundLabels>
-      <!-- FILTER: only sites explicitly listed in annotations.xml appear -->
+      <!-- FILTER: only sites listed in annotations.xml appear — no open web -->
       <Label name="_include_" mode="FILTER"/>
     </BackgroundLabels>
   </Context>
   <Facets>
     <FacetItem title="All"/>
-    <FacetItem title="Reference"     label="reference"/>
-    <FacetItem title="Math"          label="math"/>
-    <FacetItem title="Science"       label="science"/>
-    <FacetItem title="History"       label="history"/>
-    <FacetItem title="Language Arts" label="language_arts"/>
+    <FacetItem title="Jewish Texts"   label="jewish_texts"/>
+    <FacetItem title="Chasidus"       label="chasidus"/>
+    <FacetItem title="Halacha"        label="halacha"/>
+    <FacetItem title="Hebrew"         label="hebrew"/>
+    <FacetItem title="Math"           label="math"/>
+    <FacetItem title="Science"        label="science"/>
+    <FacetItem title="History"        label="history"/>
+    <FacetItem title="Reference"      label="reference"/>
   </Facets>
 </CustomSearchEngine>

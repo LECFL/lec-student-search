@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LEC Student Search — Custom Autocomplete
+  ==========================================
+  Upload in PSE Control Panel > Search Features > Autocomplete > Upload XML
+  Each <Autocompletion> is one suggestion. <promotion>1</promotion> makes it
+  appear at the top of the suggestion list; 0 = normal ranking.
+-->
+<Autocompletions>
+
+  <!-- ── Torah & Tanach ──────────────────────────────────────── -->
+  <Autocompletion><terms>Torah</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Chumash</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Parsha</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>weekly parsha</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Bereishis</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Shemos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Vayikra</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Bamidbar</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Devarim</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tanach</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Tehillim</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Psalms</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Mishlei</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Talmud ──────────────────────────────────────────────── -->
+  <Autocompletion><terms>Talmud</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Gemara</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Mishnah</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Daf Yomi</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tractate Berachos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tractate Shabbos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tractate Bava Kama</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tractate Sanhedrin</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Chasidus ────────────────────────────────────────────── -->
+  <Autocompletion><terms>Tanya</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Chasidus</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Chassidus</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Alter Rebbe</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Lubavitcher Rebbe</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Hayom Yom</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Likkutei Torah</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Torah Or</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Maamar</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Sicha</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Farbrengen</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Halacha ─────────────────────────────────────────────── -->
+  <Autocompletion><terms>Halacha</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Shulchan Aruch</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Mishneh Torah</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Kitzur Shulchan Aruch</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Jewish law</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Shabbos laws</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Kashrus</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Brachos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tefillah laws</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Holidays ────────────────────────────────────────────── -->
+  <Autocompletion><terms>Jewish holidays</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Rosh Hashana</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Yom Kippur</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Sukkos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Simchas Torah</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Chanukah</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Purim</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Pesach</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Passover</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Shavuos</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Lag B'Omer</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Tisha B'Av</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Hebrew Language ─────────────────────────────────────── -->
+  <Autocompletion><terms>Hebrew alphabet</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Aleph beis</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Hebrew grammar</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Hebrew verbs</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Hebrew vocabulary</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Hebrew dictionary</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>learn Hebrew</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Jewish History ──────────────────────────────────────── -->
+  <Autocompletion><terms>Jewish history</terms><promotion>1</promotion></Autocompletion>
+  <Autocompletion><terms>Holocaust</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Beis Hamikdash</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Temple in Jerusalem</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Exodus from Egypt</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Chabad history</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>State of Israel history</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Math ────────────────────────────────────────────────── -->
+  <Autocompletion><terms>algebra</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>geometry</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>calculus</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>fractions</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>graphing calculator</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Pythagorean theorem</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>quadratic formula</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>order of operations</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── Science ─────────────────────────────────────────────── -->
+  <Autocompletion><terms>photosynthesis</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>cell biology</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>solar system</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>periodic table</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Newton's laws</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>states of matter</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>ecosystems</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── English & Language Arts ────────────────────────────── -->
+  <Autocompletion><terms>parts of speech</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>essay writing</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>literary devices</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>figurative language</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>reading comprehension</terms><promotion>0</promotion></Autocompletion>
+
+  <!-- ── History & Social Studies ───────────────────────────── -->
+  <Autocompletion><terms>American Revolution</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Civil War</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>World War II</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Ancient Egypt</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Ancient Rome</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>US Constitution</terms><promotion>0</promotion></Autocompletion>
+  <Autocompletion><terms>Bill of Rights</terms><promotion>0</promotion></Autocompletion>
+
+</Autocompletions>

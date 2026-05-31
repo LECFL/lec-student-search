@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  LEC Student Search — Query Synonyms (Query Enhancement)
+  =========================================================
+  Upload in PSE Control Panel > Search Features > Query Enhancement > Upload XML
+  Each <synonym> group means all terms inside are treated as equivalent.
+  When a student searches any one term, results for all variants are returned.
+-->
+<synonyms>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- TORAH & CHUMASH                                            -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Chumash</term>
+      <term>Humash</term>
+      <term>Pentateuch</term>
+      <term>Five Books of Moses</term>
+      <term>Five Books of Torah</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Torah</term>
+      <term>Toirah</term>
+      <term>Jewish Bible</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Bereishis</term>
+      <term>Beresheet</term>
+      <term>Genesis</term>
+      <term>Book of Genesis</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Shemos</term>
+      <term>Shemot</term>
+      <term>Exodus</term>
+      <term>Book of Exodus</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Vayikra</term>
+      <term>Leviticus</term>
+      <term>Book of Leviticus</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Bamidbar</term>
+      <term>Numbers</term>
+      <term>Book of Numbers</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Devarim</term>
+      <term>Deuteronomy</term>
+      <term>Book of Deuteronomy</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PARSHA                                                     -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>parsha</term>
+      <term>parashah</term>
+      <term>parasha</term>
+      <term>parshas</term>
+      <term>weekly Torah portion</term>
+      <term>Torah portion</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- TANACH                                                     -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Tanach</term>
+      <term>Tanakh</term>
+      <term>Hebrew Bible</term>
+      <term>Jewish scriptures</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Tehillim</term>
+      <term>Psalms</term>
+      <term>Book of Psalms</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Mishlei</term>
+      <term>Proverbs</term>
+      <term>Book of Proverbs</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Yechezkel</term>
+      <term>Ezekiel</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Yeshayahu</term>
+      <term>Isaiah</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- TALMUD                                                     -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Gemara</term>
+      <term>Talmud</term>
+      <term>Gemarah</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Mishnah</term>
+      <term>Mishna</term>
+      <term>Mishneh</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- CHASIDUS                                                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Chasidus</term>
+      <term>Chassidus</term>
+      <term>Hasidism</term>
+      <term>Chasidism</term>
+      <term>Chassidism</term>
+      <term>Chabad philosophy</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Tanya</term>
+      <term>Likutei Amarim</term>
+      <term>Likkutei Amarim</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Alter Rebbe</term>
+      <term>Rabbi Shneur Zalman</term>
+      <term>Shneur Zalman of Liadi</term>
+      <term>Baal HaTanya</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Lubavitcher Rebbe</term>
+      <term>Rebbe</term>
+      <term>Rabbi Schneerson</term>
+      <term>Menachem Mendel Schneerson</term>
+      <term>Rabbi Menachem Mendel Schneerson</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- HALACHA                                                    -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Halacha</term>
+      <term>Halachah</term>
+      <term>Halakha</term>
+      <term>Jewish law</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Shabbos</term>
+      <term>Shabbat</term>
+      <term>Sabbath</term>
+      <term>Jewish Sabbath</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Kashrus</term>
+      <term>Kashrut</term>
+      <term>Kashruth</term>
+      <term>Kosher laws</term>
+      <term>dietary laws</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Tefillah</term>
+      <term>Tefila</term>
+      <term>Jewish prayer</term>
+      <term>davening</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Siddur</term>
+      <term>prayer book</term>
+      <term>Jewish prayer book</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Brachos</term>
+      <term>Brachot</term>
+      <term>blessings</term>
+      <term>Jewish blessings</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Tznius</term>
+      <term>Tzniut</term>
+      <term>modesty laws</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- HOLIDAYS                                                   -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Rosh Hashana</term>
+      <term>Rosh Hashanah</term>
+      <term>Jewish New Year</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Yom Kippur</term>
+      <term>Day of Atonement</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Sukkos</term>
+      <term>Sukkot</term>
+      <term>Feast of Tabernacles</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Pesach</term>
+      <term>Passover</term>
+      <term>Peysakh</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Shavuos</term>
+      <term>Shavuot</term>
+      <term>Shavuoth</term>
+      <term>Feast of Weeks</term>
+      <term>Pentecost</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Chanukah</term>
+      <term>Hanukkah</term>
+      <term>Chanukkah</term>
+      <term>Festival of Lights</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Simchas Torah</term>
+      <term>Simchat Torah</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- JEWISH CONCEPTS                                            -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>Beis Hamikdash</term>
+      <term>Beit Hamikdash</term>
+      <term>Temple in Jerusalem</term>
+      <term>Holy Temple</term>
+      <term>Jewish Temple</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Eretz Yisroel</term>
+      <term>Eretz Yisrael</term>
+      <term>Land of Israel</term>
+      <term>Israel</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Moshiach</term>
+      <term>Mashiach</term>
+      <term>Messiah</term>
+      <term>Jewish Messiah</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Tzaddik</term>
+      <term>Tzadik</term>
+      <term>righteous person</term>
+    </terms>
+  </synonym>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- GENERAL STUDIES                                            -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <synonym>
+    <terms>
+      <term>math help</term>
+      <term>mathematics help</term>
+      <term>math homework</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>science help</term>
+      <term>science homework</term>
+    </terms>
+  </synonym>
+
+  <synonym>
+    <terms>
+      <term>Holocaust</term>
+      <term>Shoah</term>
+      <term>World War 2 Jewish history</term>
+    </terms>
+  </synonym>
+
+</synonyms>

@@ -289,13 +289,15 @@
   </footer>
 
   <script>
-    // Force all PSE result links to open in the same tab
-    const observer = new MutationObserver(() => {
-      document.querySelectorAll('.gsc-results a, .gs-title a').forEach(a => {
-        a.target = '_self';
-      });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    // Intercept PSE result link clicks and force same-tab navigation
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (a && a.href && a.closest('.gsc-results, .gsc-result, .gs-result')) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        window.location.href = a.href;
+      }
+    }, true);
   </script>
 
 </body>

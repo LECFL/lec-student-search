@@ -390,13 +390,9 @@
       });
     }
 
-    const DOMAIN_RE = /^[a-z0-9-]+\.[a-z]{2,}(\/.*)?$/i;
-
     function execSearch(q) {
       if (!q) return;
-      // Navigate directly if it looks like a URL or domain
       if (/^https?:\/\//i.test(q)) { window.location.href = q; return; }
-      if (DOMAIN_RE.test(q) && !q.includes(' ')) { window.location.href = 'https://' + q; return; }
       if (isBlocked(q)) {
         document.getElementById('results-container').innerHTML =
           '<p style="padding:24px;color:#c00;font-family:Inter,sans-serif">That search isn\'t available. Please try a different topic.</p>';

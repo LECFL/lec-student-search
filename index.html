@@ -143,15 +143,13 @@
 
     /* ── Autocomplete dropdown ───────────────────────────────── */
     .ac-dropdown {
-      position: absolute;
-      top: 100%;
-      left: 0; right: 0;
+      position: fixed;
       background: white;
       border: 1.5px solid var(--border);
       border-top: none;
       border-radius: 0 0 10px 10px;
       box-shadow: 0 6px 20px rgba(44,43,148,0.1);
-      z-index: 100;
+      z-index: 1000;
       max-height: 240px;
       overflow-y: auto;
     }
@@ -413,10 +411,14 @@
     function buildDropdown(matches) {
       closeDropdown();
       if (!matches.length) return;
+      const rect = form.getBoundingClientRect();
       const dd = document.createElement('div');
       dd.className = 'ac-dropdown';
       dd.id = 'ac-dropdown';
-      matches.slice(0, 8).forEach((term, i) => {
+      dd.style.left  = rect.left + 'px';
+      dd.style.top   = rect.bottom + 'px';
+      dd.style.width = rect.width + 'px';
+      matches.slice(0, 8).forEach((term) => {
         const item = document.createElement('div');
         item.className = 'ac-item';
         item.textContent = term;
@@ -428,7 +430,7 @@
         });
         dd.appendChild(item);
       });
-      form.appendChild(dd);
+      document.body.appendChild(dd);
       acIndex = -1;
     }
 

@@ -288,5 +288,15 @@
     Safe, curated search &nbsp;·&nbsp; <span>Lubavitch Educational Center</span>
   </footer>
 
+  <script>
+    // Force all PSE result links to open in the same tab
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll('.gsc-results a, .gs-title a').forEach(a => {
+        a.target = '_self';
+      });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  </script>
+
 </body>
 </html>

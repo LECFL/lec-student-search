@@ -390,6 +390,11 @@
       });
     }
 
+    function pollRenameTabs(attempts) {
+      renameTabs();
+      if (attempts > 0) setTimeout(() => pollRenameTabs(attempts - 1), 200);
+    }
+
     function execSearch(q) {
       if (!q) return;
       if (/^https?:\/\//i.test(q)) { window.location.href = q; return; }
@@ -401,7 +406,7 @@
       history.replaceState({}, '', '?q=' + encodeURIComponent(q));
       const el = google.search.cse.element.getAllElements();
       const key = Object.keys(el)[0];
-      if (key) el[key].execute(q);
+      if (key) { el[key].execute(q); pollRenameTabs(10); }
     }
 
     // ── Autocomplete ─────────────────────────────────────────
@@ -485,7 +490,7 @@
     window.__gcse = {
       parsetags: 'explicit',
       callback: function() {
-        google.search.cse.element.render({ div: 'results-container', tag: 'searchresults-only', attributes: { linkTarget: '_self' } });
+        google.search.cse.element.render({ div: 'results-container', tag: 'searchresults-only', gname: 'stdsearch', attributes: { linkTarget: '_self', enableOrderBy: 'false', overlayResults: 'false' } });
         const q = new URLSearchParams(window.location.search).get('q');
         if (q) {
           document.getElementById('search-input').value = q;

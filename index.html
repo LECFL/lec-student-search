@@ -11,6 +11,8 @@
     window.__gcse = { parsetags: 'explicit' };
 
     // ── Blocked search terms ──────────────────────────────────────
+    const AC_TERMS = ["Torah","Chumash","Parsha","weekly parsha","Bereishis","Shemos","Vayikra","Bamidbar","Devarim","Tanach","Tehillim","Psalms","Mishlei","Talmud","Gemara","Mishnah","Daf Yomi","Tractate Berachos","Tractate Shabbos","Tractate Bava Kama","Tractate Sanhedrin","Tanya","Chasidus","Chassidus","Alter Rebbe","Lubavitcher Rebbe","Hayom Yom","Likkutei Torah","Torah Or","Maamar","Sicha","Farbrengen","Halacha","Shulchan Aruch","Mishneh Torah","Kitzur Shulchan Aruch","Jewish law","Shabbos laws","Kashrus","Brachos","Tefillah laws","Jewish holidays","Rosh Hashana","Yom Kippur","Sukkos","Simchas Torah","Chanukah","Purim","Pesach","Passover","Shavuos","Lag B'Omer","Tisha B'Av","Hebrew alphabet","Aleph beis","Hebrew grammar","Hebrew verbs","Hebrew vocabulary","Hebrew dictionary","learn Hebrew","Jewish history","Holocaust","Beis Hamikdash","Temple in Jerusalem","Exodus from Egypt","Chabad history","State of Israel history","algebra","geometry","calculus","fractions","graphing calculator","Pythagorean theorem","quadratic formula","order of operations","photosynthesis","cell biology","solar system","periodic table","Newton's laws","states of matter","ecosystems","parts of speech","essay writing","literary devices","figurative language","reading comprehension","American Revolution","Civil War","World War II","Ancient Egypt","Ancient Rome","US Constitution","Bill of Rights"];
+
     const BLOCKED = [
       'porn','sex','nude','naked','xxx','adult','erotic','hentai',
       'playboy','onlyfans','nsfw','fuck','shit','bitch','ass','dick',
@@ -138,6 +140,29 @@
       transition: background 0.15s;
     }
     .search-btn:hover { background: var(--blue); }
+
+    /* ── Autocomplete dropdown ───────────────────────────────── */
+    .ac-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: white;
+      border: 1.5px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 6px 20px rgba(44,43,148,0.1);
+      z-index: 100;
+      max-height: 240px;
+      overflow-y: auto;
+    }
+    .ac-item {
+      padding: 9px 14px;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      cursor: pointer;
+    }
+    .ac-item:hover, .ac-item.ac-active { background: #eef3ff; color: var(--navy); }
+    .search-form { position: relative; }
 
     .gsc-control-cse {
       background: transparent !important;
@@ -380,9 +405,77 @@
       if (key) el[key].execute(q);
     }
 
-    document.getElementById('search-form').addEventListener('submit', function(e) {
+    // ── Autocomplete ─────────────────────────────────────────
+    const input = document.getElementById('search-input');
+    const form  = document.getElementById('search-form');
+    let acIndex = -1;
+
+    function buildDropdown(matches) {
+      closeDropdown();
+      if (!matches.length) return;
+      const dd = document.createElement('div');
+      dd.className = 'ac-dropdown';
+      dd.id = 'ac-dropdown';
+      matches.slice(0, 8).forEach((term, i) => {
+        const item = document.createElement('div');
+        item.className = 'ac-item';
+        item.textContent = term;
+        item.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          input.value = term;
+          closeDropdown();
+          execSearch(term);
+        });
+        dd.appendChild(item);
+      });
+      form.appendChild(dd);
+      acIndex = -1;
+    }
+
+    function closeDropdown() {
+      const dd = document.getElementById('ac-dropdown');
+      if (dd) dd.remove();
+      acIndex = -1;
+    }
+
+    input.addEventListener('input', function() {
+      const q = this.value.trim();
+      if (q.length < 2) { closeDropdown(); return; }
+      const matches = AC_TERMS.filter(t => t.toLowerCase().startsWith(q.toLowerCase()));
+      buildDropdown(matches);
+    });
+
+    input.addEventListener('keydown', function(e) {
+      const dd = document.getElementById('ac-dropdown');
+      if (!dd) return;
+      const items = dd.querySelectorAll('.ac-item');
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        acIndex = Math.min(acIndex + 1, items.length - 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        acIndex = Math.max(acIndex - 1, -1);
+      } else if (e.key === 'Escape') {
+        closeDropdown(); return;
+      } else if (e.key === 'Enter' && acIndex >= 0) {
+        e.preventDefault();
+        input.value = items[acIndex].textContent;
+        closeDropdown();
+        execSearch(input.value);
+        return;
+      }
+      items.forEach((el, i) => el.classList.toggle('ac-active', i === acIndex));
+      if (acIndex >= 0) input.value = items[acIndex].textContent;
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!form.contains(e.target)) closeDropdown();
+    });
+
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      execSearch(document.getElementById('search-input').value.trim());
+      closeDropdown();
+      execSearch(input.value.trim());
     });
 
     // Run initial search from URL ?q= parameter (omnibox flow)

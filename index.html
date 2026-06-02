@@ -351,6 +351,22 @@
   </footer>
 
   <script>
+    const TAB_LABELS = {
+      'judaic_texts': 'Judaic Texts',
+      'chassidus':    'Chassidus',
+      'math':         'Math',
+      'science':      'Science',
+      'history':      'History',
+      'reference':    'Reference',
+    };
+
+    function renameTabs() {
+      document.querySelectorAll('.gsc-tabHeader').forEach(el => {
+        const key = el.textContent.trim();
+        if (TAB_LABELS[key]) el.textContent = TAB_LABELS[key];
+      });
+    }
+
     function execSearch(q) {
       if (!q) return;
       if (isBlocked(q)) {
@@ -379,6 +395,7 @@
           document.getElementById('search-input').value = q;
           execSearch(q);
         }
+        new MutationObserver(renameTabs).observe(document.getElementById('results-container'), { childList: true, subtree: true });
       }
     };
   </script>

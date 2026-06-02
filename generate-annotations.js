@@ -60,7 +60,7 @@ sites.forEach(([about, url, labels], i) => {
   const ts = '0x' + (base + BigInt(i)).toString(16).padStart(16, '0');
   lines.push(`  <Annotation about="${about}" timestamp="${ts}" score="1.0">`);
   lines.push(`    <Label name="${includeLabel}"/>`);
-  // labels.forEach(l => lines.push(`    <Label name="${l}"/>`)); // add after refinements configured
+  labels.forEach(l => lines.push(`    <Label name="${l}"/>`));
   lines.push(`    <AdditionalData attribute="original_url" value="${url}"/>`);
   lines.push(`  </Annotation>`);
 });

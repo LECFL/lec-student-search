@@ -7,6 +7,24 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    window.__gcse = { parsetags: 'explicit' };
+
+    // ── Blocked search terms ──────────────────────────────────────
+    const BLOCKED = [
+      'porn','sex','nude','naked','xxx','adult','erotic','hentai',
+      'playboy','onlyfans','nsfw','fuck','shit','bitch','ass','dick',
+      'penis','vagina','boobs','breast','nipple',
+    ];
+
+    function isBlocked(q) {
+      const lower = q.toLowerCase();
+      return BLOCKED.some(w => {
+        const re = new RegExp('\\b' + w + '\\b', 'i');
+        return re.test(lower);
+      });
+    }
+  </script>
   <script async src="https://cse.google.com/cse.js?cx=007545801562387941008:s3n9yitemci"></script>
 
   <style>
@@ -85,6 +103,42 @@
     }
 
     /* ── Google CSE Overrides ─────────────────────────────────── */
+    /* ── Custom search box ───────────────────────────────────── */
+    .search-form {
+      display: flex;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.15s;
+      background: white;
+    }
+    .search-form:focus-within { border-color: var(--navy); }
+
+    .search-input {
+      flex: 1;
+      padding: 10px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    .search-input::placeholder { color: #aaa; }
+    .search-input::-webkit-search-cancel-button { display: none; }
+
+    .search-btn {
+      padding: 0 18px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: background 0.15s;
+    }
+    .search-btn:hover { background: var(--blue); }
+
     .gsc-control-cse {
       background: transparent !important;
       border: none !important;
@@ -279,7 +333,16 @@
 
   <main>
     <div class="search-card">
-      <div class="gcse-search" data-autoSearchOnLoad="true" data-linkTarget="_self"></div>
+      <form class="search-form" id="search-form">
+        <input type="search" class="search-input" id="search-input"
+               placeholder="Search…" autocomplete="off" spellcheck="false" />
+        <button type="submit" class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+      </form>
+      <div id="results-container">
+        <div class="gcse-searchresults-only" data-linkTarget="_self"></div>
+      </div>
     </div>
   </main>
 
@@ -288,15 +351,36 @@
   </footer>
 
   <script>
-    // Intercept PSE result link clicks and force same-tab navigation
-    document.addEventListener('click', function(e) {
-      const a = e.target.closest('a');
-      if (a && a.href && a.closest('.gsc-results, .gsc-result, .gs-result')) {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        window.location.href = a.href;
+    function execSearch(q) {
+      if (!q) return;
+      if (isBlocked(q)) {
+        document.getElementById('results-container').innerHTML =
+          '<p style="padding:24px;color:#c00;font-family:Inter,sans-serif">That search isn\'t available. Please try a different topic.</p>';
+        return;
       }
-    }, true);
+      history.replaceState({}, '', '?q=' + encodeURIComponent(q));
+      const el = google.search.cse.element.getAllElements();
+      const key = Object.keys(el)[0];
+      if (key) el[key].execute(q);
+    }
+
+    document.getElementById('search-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      execSearch(document.getElementById('search-input').value.trim());
+    });
+
+    // Run initial search from URL ?q= parameter (omnibox flow)
+    window.__gcse = {
+      parsetags: 'explicit',
+      callback: function() {
+        google.search.cse.element.render({ div: 'results-container', tag: 'searchresults-only', attributes: { linkTarget: '_self' } });
+        const q = new URLSearchParams(window.location.search).get('q');
+        if (q) {
+          document.getElementById('search-input').value = q;
+          execSearch(q);
+        }
+      }
+    };
   </script>
 
 </body>
